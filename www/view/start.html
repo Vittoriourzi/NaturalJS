@@ -1,0 +1,24 @@
+<view> 
+        <app-header>
+            <navi centerContent="La mia app"
+                  rightIcon="ion-ios7-plus-empty" ></navi>    
+        </app-header>
+        <app-content> 
+            <search placeholder="Cerca"></search>
+            <switch-tap opt1="News" opt2="Posts" opt3="Peaple" active="Posts"></switch-tap>
+            <checkbox color="green" dim="bigswitch" id="miocheckbox" value="checked"></checkbox>    
+            <list class="navigation">
+                <record page-navi="scopri.html" icon="ion-ios7-arrow-forward" text="Scopri"></record>
+                <record text="Login"></record>
+                <record text="Registrazione"></record>
+                <record text="Account"></record>
+             </list>
+        </app-content>
+        <app-footer>
+            <ul>
+                <li ><a class="ion-ios7-browsers-outline"></a><label>Browser</label></li>
+                <li><a class="ion-ios7-compose-outline"></a><label>Scrivi</label></li>
+                <li><a class="ion-ios7-bookmarks-outline"></a><label>Bookmarks</label></li>
+            </ul>
+        </app-footer><!-- /content -->   
+    </view>

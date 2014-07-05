@@ -1,0 +1,6 @@
+        <script type="text/javascript" src="js/libs/interface/navi.js"></script>
+        <script type="text/javascript" src="js/libs/interface/box-switch.js"></script>
+        <script type="text/javascript" src="js/libs/interface/box-search.js"></script>
+        <script type="text/javascript" src="js/libs/interface/box-check.js"></script>
+        <script type="text/javascript" src="js/libs/interface/gui.js"></script>
+        <script type="text/javascript" src="js/libs/interface/layout.js"></script>

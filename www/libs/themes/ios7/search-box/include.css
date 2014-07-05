@@ -1,0 +1,210 @@
+/*-----------------------*/
+/*-----------------------*/
+/*-----NON ATTIVO -------*/
+/*-----------------------*/
+/*-----------------------*/
+
+search input::-webkit-input-placeholder{
+   content: "\f2f5";
+}
+
+search input:-moz-placeholder { /* Firefox 18- */
+   content: "\f2f5";
+}
+
+search input::-moz-placeholder {  /* Firefox 19+ */
+    content: "\f2f5";
+}
+
+search input:-ms-input-placeholder {  
+    content: "\f2f5";
+
+}
+search{
+    position:relative;
+    height:89%;
+    overflow:hidden;
+}
+app-header search.firstElementOfDom .box{
+    border-top:none;
+    border-bottom: 1px solid #b5b5b5;
+    position:relative;
+    height:89%;
+    
+}
+
+app-header search .box{
+    border-top:1px solid #b5b5b5;
+    border-bottom:none;
+    position:relative;
+    height:89%;
+font-size: 16px;
+    
+}
+search.firstElementOfDom .box{
+    border-top:none;
+    border-bottom: 1px solid #b5b5b5;
+}
+search .box{
+    padding:7px;
+    background-color: rgba(0,0,0,0.1);
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    border-top: 1px solid #b5b5b5;
+    border-bottom: 1px solid #b5b5b5;
+}
+search .search-bar-abort-area{
+    display:none;
+}
+
+search .box input{
+    padding:7px;
+    background-color:#fff;
+    text-align:left;
+    border:none;
+    
+    height:15px;
+    font-size: 14px;
+    -webkit-box-flex: 1 0 auto;
+    -moz-box-flex: 1 0 auto;
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex:1 0 auto;
+    outline:none;
+    padding-left:0px;
+    margin-left:0px;
+    border-radius:0px 5px 5px 0px;
+}
+search.inWriting .box input{
+    margin-right:0px;
+    border-radius:0px;
+}
+search .box a#abort{
+display:none;
+margin-left: 10px;
+margin-right:10px;
+color:#007aff;
+float:right;
+font-size: 15px;
+width:0px;
+height:0px;
+line-height: 29px;
+cursor:pointer;
+}
+
+view.search-box-actived search{
+    
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    -webkit-flex-direction: column; 
+}
+search.inWriting .box .ion-ios7-close{
+    display: inline-block;
+} 
+search .box .ion-ios7-close{
+    display: none;
+    font-family: "Ionicons"; 
+    speak: none; 
+    font-style: normal; 
+    font-weight: normal; 
+    font-variant: normal;
+    text-transform: none; 
+    text-rendering: auto; 
+    margin-right:2px;
+    line-height: 1; 
+    border-radius:0px 5px 5px 0px;
+    padding:7px;
+    width:30px;
+    min-width: 30px;
+    height:15px;
+    font-size: 17px;
+    line-height:15px;
+    padding-left:0px;
+    padding-right:0px;
+    text-align: center;
+    background-color:#fff;
+    color: #cbcbcb;
+}
+
+search .box .ion-ios7-search{
+    
+    font-family: "Ionicons"; 
+    speak: none; 
+    font-style: normal; 
+    font-weight: normal; 
+    font-variant: normal;
+    text-transform: none; 
+    text-rendering: auto; 
+    line-height: 1; 
+    -webkit-font-smoothing: antialiased; 
+    -moz-osx-font-smoothing: grayscale;
+    border-radius:5px 0px 0px 5px;
+    padding:7px;
+    width: 24px;
+    padding-right: 0px;
+    background-color:#fff;
+    height:15px;
+    font-size: 15px;
+    line-height: 15px;
+    color: #cbcbcb;
+    font-weight:bold;
+    min-width: 24px;
+    padding-left: 0px;
+    text-align: center;
+}
+view.search-box-actived search .box .ion-ios7-search{
+    display:inline-block;
+}
+view.search-box-actived search .box input{ 
+    background-image: none;
+    margin-left:0px;
+    padding-left:0px;
+    border-radius: 0px 5px 5px 0px;
+    text-align:left;
+}
+
+view.search-box-actived search.inWriting .box input{ 
+    border-radius:0px;
+}
+view.search-box-actived search .box{
+    padding-top:27px;
+    border-top: none;
+    position:relative;
+    height:35px;
+    background-color:#ccc;
+    z-index:1000;
+    min-height: 31px;
+    max-height: 31px;
+}
+view.search-box-actived search .search-bar-abort-area{
+    display:block;
+    height:100%;
+    width:100%;
+    -webkit-flex: auto;
+    -moz-flex: auto;
+    -ms-flex: auto;
+    flex: auto;
+    background-color:rgba(0,0,0,0.6);
+ }
+view.search-box-actived search .box a#abort{
+display:inline-block;
+width:auto;
+}
+
+view.search-box-actived search{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    z-index:10;
+    
+    height:100%;
+}

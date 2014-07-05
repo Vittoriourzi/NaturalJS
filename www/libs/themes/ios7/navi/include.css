@@ -1,0 +1,82 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 22-giu-2014, 17.18.26
+    Author     : vittoriourzi
+*/
+
+
+navi .ion-ios7-arrow-back{
+margin-right:5px;
+font-size:26px;
+display:inline;
+line-height:18px;
+vertical-align:-4px;
+}
+navi{
+    height:44px;
+    width:100%;
+    display: block;
+    display: -ms-box;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    -ms-box-orient: horizontal;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    box-orient: horizontal;
+}
+navi .area-info-navi{
+    text-align:center;
+    -ms-box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+}
+navi .area-button-navi{
+    min-width:50px;
+}
+navi .area-button-navi:first-child{
+    text-align:left;
+}
+navi .area-button-navi:last-child{
+    text-align:right;
+}
+navi .area-button-navi h1,navi .area-button-navi h1{
+    font-weight:normal;
+    margin-left:10px;
+    margin-right:10px;
+    font-size: 16px;
+    color: #007aff;
+    cursor:pointer;
+}
+
+navi .area-button-navi h1.back{
+    cursor:pointer;
+    padding-left:23px;
+    background-image:url(../images/iconset/back.png);
+    background-repeat: no-repeat;
+    background-position-y:12px;
+}
+navi h1{
+    font-weight:bold;
+    text-overflow: ellipsis;
+    color:black;
+    margin:0px;font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    padding:0px;
+    
+}
+
+navi icon{
+    font-size:25px;
+    
+    margin:0;
+    padding:0px;
+    padding-right:5px;
+    display:inline-block;
+    vertical-align:sub;
+}

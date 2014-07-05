@@ -1,0 +1,52 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 29-apr-2014, 18.27.16
+    Author     : vittoriourzi
+*/
+
+
+/*list*/
+list{
+    display:block;
+    
+border-top: solid 1px #c8c8c8;
+
+    border-bottom: solid 1px #c8c8c8;
+margin:0px;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+list record{
+    display:block;
+    background-color: #fff;
+    font-size: 14px;
+}
+list record label{ 
+    padding: 13px 0px;
+    display:block;
+    color:#000;
+    border-bottom: solid 1px #c8c8c8;
+    margin-left:10px;
+    position: relative;
+}
+list record:last-child label{
+    border-bottom:none;
+}
+list record label:hover{
+    
+}
+
+list.navigation record label actionarea{
+    float:right;
+    color:#cbcbcb;
+    padding-right:10px;
+    font-size:inherit;
+}
+
+list.navigation record label actionarea a.ion-ios7-arrow-forward{
+    line-height:18px;
+}

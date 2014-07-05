@@ -1,0 +1,39 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+    <title>FriendMapp</title> 
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <link rel="stylesheet" href="css/gui.css" />
+        <link rel="stylesheet" href="css/anim.css" />
+        <link rel="stylesheet" href="css/ui/search-box.css" />
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="js/libs/jqueryui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+        <script src="js/libs/jgestures/jgestures.min.js"></script>
+    </head> 
+<body>
+    <view> 
+            <app-header>
+                <navi>
+                <div class="areaButtonLft"><h1 class="back">Back</h1></div>
+                <div class="areaButtonCtr">
+                    <h1>Home</h1>
+                </div>
+                <div class="areaButtonRgt"><h1>Edit</h1></div>
+                </navi>
+            </app-header><!-- /header -->
+            <app-content>
+                   <switch-tap id="switchTab1" opt1="All" opt3="Peaple" opt2="Photoes" opt4="Posts" active="all"></switch-tap>
+                   <checkbox color="green" dim="bigswitch" id="miocheckbox" value="checked"></checkbox>
+                   <search placeholder="Search"></search>
+            </app-content>
+            <app-footer> 
+                
+            </app-footer><!-- /content -->  
+    </view>
+</body>
+
+<script type="text/javascript" src="js/libs/gui/layout.js"></script>
+<script type="text/javascript" src="js/libs/gui/box-switch.js"></script>
+<script type="text/javascript" src="js/libs/gui/box-search.js"></script>
+<script type="text/javascript" src="js/libs/gui/box-check.js"></script>
+</html>

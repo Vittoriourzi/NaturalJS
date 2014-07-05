@@ -1,0 +1,101 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 16-apr-2014, 18.00.20
+    Author     : vittoriourzi
+*/
+
+search .search-bar-results-box .content{
+    height:100%;
+    background-color:white;
+}
+search .search-bar-results-box{
+    display:none;
+}
+
+app-header search .box{
+  border-bottom: none;
+}
+search .box{
+  max-height: 64px;
+  background-color:#d3d3d3;
+  border-bottom: 1px solid #b5b5b5;
+  padding:5px;
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: rows;
+  -webkit-flex-direction: rows; 
+}
+search .box a#abort{
+    display:none;
+    color:#2087fc;
+    cursor:pointer;
+    z-index: 1;
+    padding: 0 8px;
+    max-height: 32px;
+    line-height: 32px;
+    font-size: 17px;
+    font-weight: 400;
+}
+search .box input{
+    text-align:left;
+    border-radius:4px;
+    border:none;
+    background-image:url(../../images/iconset/search27.png);
+    background-position:8px;
+    background-repeat:no-repeat;
+    outline:none;
+    font-size:14px;
+    padding:8px 8px 8px 28px;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0;
+    -moz-box-flex: 1;
+    -moz-flex: 1 0;
+    -ms-flex: 1 0;
+    flex: 1 0;
+    
+}
+
+view.search-box-actived search .box a#abort{
+    display: block;
+}
+view.search-box-actived search{
+    position:absolute;
+    z-index:10;
+    width:100%;
+    margin:0px;
+    padding:0px;
+    top: 0;
+    left: 0;
+    border:none;
+    height: 100%;
+    background-color:rgba(0,0,0,0.5);
+}
+
+view.search-box-actived .box{
+    padding-top:25px;
+  border-bottom: none;
+}
+view.search-box-actived input{
+    text-align:left;
+}
+
+view.search-box-actived search .search-bar-abort-area{
+    height:100%;
+    display:block;
+    width:100%;
+}
+
+view.search-box-actived search .search-bar-results-box{
+    height:100%;
+    display:none;
+    width:100%;
+}

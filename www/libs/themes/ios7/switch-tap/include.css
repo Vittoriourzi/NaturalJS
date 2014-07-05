@@ -1,0 +1,77 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 22-giu-2014, 17.19.32
+    Author     : vittoriourzi
+*/
+
+
+switch-tap{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width:100%;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    
+}
+switch-tap ul{
+    list-style: none;
+    text-align: center;
+    width:100%;
+    height:100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: rows;
+    flex-align: row;
+    font-size: 15px;
+    font-weight:normal;
+    padding:10px;
+    margin:0px;
+}
+switch-tap ul li{
+    list-style: none;
+    padding:0px;
+    margin:0px;
+    text-align:center;
+    
+    height:14px;
+    font-size:13px;
+    line-height: 14px;
+    -webkit-flex: 1 1 auto;
+    -moz-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    background-color: transparent;
+    color:#007aff;
+    padding:6px ;
+    border:1px solid #007aff;
+    border-left:none;
+    display:inline-block;
+    cursor:pointer;
+}
+switch-tap ul li.active{
+    background-color:#007aff;
+    color:#ffffff;
+}
+switch-tap ul li:first-child{
+    border-left:1px solid blue;
+    border-radius: 5px 0px 0px 5px;
+}
+switch-tap ul li:last-child{
+    border-radius: 0px 5px 5px 0px;
+}
