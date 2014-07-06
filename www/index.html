@@ -3,42 +3,27 @@
     <head> 
     <title>FriendMapp</title> 
     <meta name="viewport" content="width=device-width, user-scalable=no" />
-    
         <link rel="stylesheet" href="libs/dependence/ionicons/ionicons.css" />
         <script type="text/javascript" src="libs/dependence/jquery/jquery.js"></script>
         <script type="text/javascript" src="libs/dependence/jqueryui-touch-punch/jquery.ui.touch-punch.min.js"></script>
-        
-
-        <link rel="stylesheet" href="libs/themes/ios7/check-box/include.css" />
-        <link rel="stylesheet" href="libs/themes/ios7/search-box/include.css" />
-        <link rel="stylesheet" href="libs/themes/ios7/list/include.css" />
-        <link rel="stylesheet" href="libs/themes/ios7/navi/include.css" />
-        <link rel="stylesheet" href="libs/themes/ios7/switch-tap/include.css" />
-        <link rel="stylesheet" href="libs/themes/ios7/layout/include.css" />
-        <script type="text/javascript" src="libs/themes/ios7/switch-tap/include.js"></script>
-        <script type="text/javascript" src="libs/themes/ios7/navi/include.js"></script>
-        <script type="text/javascript" src="libs/themes/ios7/list/include.js"></script>
-        <script type="text/javascript" src="libs/themes/ios7/search-box/include.js"></script>
-        <script type="text/javascript" src="libs/themes/ios7/check-box/include.js"></script>
-        <script type="text/javascript" src="libs/themes/ios7/gui/include.js"></script>
-        
         <link rel="stylesheet" href="libs/core/anim/include.css" />
         <script type="text/javascript" src="libs/core/anim/include.js"></script>
+        <script type="text/javascript" src="libs/core/themes/include.js"></script>
         <script type="text/javascript" src="libs/core/cache/include.js"></script>
         <script type="text/javascript" src="libs/core/view/include.js"></script>
         <script type="text/javascript" src="libs/core/browser/include.js"></script>
-        
     </head> 
 <body>
     <div id="device" style="width:320px;height:460px;">
          
     </div>
     <script>
-        var iosMobile = new Browser({
+        var NaturalJS = new Browser({
             parent: "body",
-            startView:  "start.html"
+            startView:  "start.html",
+            themes: "ios7"
         });
-        
+    
     </script>
 </body>
         

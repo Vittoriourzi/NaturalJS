@@ -1,4 +1,3 @@
-
 function transition(args){
         var config= {
                 onSuccess: function(){},

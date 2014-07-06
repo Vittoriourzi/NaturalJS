@@ -1,29 +1,35 @@
+
 function Browser(options){
     var config;
     var self=this;
     var mutex=false;
     var init=false;
     var cache;
+    var theme;
     function Constructor(options){
-        setConfig(options);
+        setupConfig(options);
+        ThemeManager=new Themes(config.themes);
+        theme=ThemeManager;
         if(config.startView!==null)
             self.loadView({
                 idView:config.startView,
                 naviType: "none"
             });
-        addHandling();
-        setDomBrowser();
+        
+        setupHandling();
+        setupDomBrowser();
     }
-    function setDomBrowser(){
+    function setupDomBrowser(){
         if(config.parent==="body"){
             $("html").css("height","100%").css("width","100%");
             $("body").addClass("parentInit");
         }
         $(config.parent).html("<app></app>");
     }
-    function setConfig(options){
+    function setupConfig(options){
         var defaults = {
             parent: "body",
+            themes: "default",
             startView: null
         };
         config = $.extend( {}, defaults, options );
@@ -51,15 +57,16 @@ function Browser(options){
             if(!$(config.parent).children("app").length)
                 $(config.parent).prepend("<app></app>");
             if(!init){
-                init=true;
                 anim="none";
             }
             new transition({
                     type:anim,
                     viewToLoad:view
             });
-            reloadUI();
-        
+            if(!init){
+                init=true;
+            }
+            else theme.apply();
     };
     
     var downloadView=function(request){
@@ -103,7 +110,7 @@ function Browser(options){
             default: return "fully.left"; break;
         }
     }
-    function addHandling(){
+    function setupHandling(){
         $( "html" ).delegate("*[page-navi]", "click", function(e) {
            e.stopPropagation();
            self.loadView(self.getDomRequest(this));
