@@ -36,6 +36,9 @@ input,textarea{
    color: #cbcbcb;
 }
 
+::-webkit-scrollbar { 
+    display: none; 
+}
 :-moz-placeholder { /* Firefox 18- */
    color: #cbcbcb;  
 }
