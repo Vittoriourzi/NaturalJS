@@ -1,19 +1,10 @@
-<view>
-        <controllers>
-            <controller>controllerStart.js</controller>
-        </controllers>
-    
+<view> 
         <app-header>
             <navi centerContent="La mia app"
                   rightIcon="ion-ios7-plus-empty" ></navi>    
-        </app-header> 
+        </app-header>
         <app-content> 
-            <search placeholder="Cerca "></search>
-            <label>Ecco i tuoi dati</label>
-            <list>
-            <record text="<@=start.person.name@>"></record>
-            <record text="<@=start.person.surname@>"></record>
-            </list>
+            <search placeholder="Cerca"></search>
             <switch-tap opt1="News" opt2="Posts" opt3="Peaple" active="Posts"></switch-tap>
             <checkbox color="green" dim="bigswitch" id="miocheckbox" value="checked"></checkbox>    
             <list class="navigation">
@@ -21,7 +12,6 @@
                 <record text="Login"></record>
                 <record text="Registrazione"></record>
                 <record text="Account"></record>
-                
              </list>
         </app-content>
         <app-footer>
@@ -31,4 +21,4 @@
                 <li><a class="ion-ios7-bookmarks-outline"></a><label>Bookmarks</label></li>
             </ul>
         </app-footer><!-- /content -->   
-</view>
+    </view>
