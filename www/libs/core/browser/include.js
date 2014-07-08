@@ -59,14 +59,32 @@ function Browser(options){
             if(!init){
                 anim="none";
             }
-            new transition({
-                    type:anim,
-                    viewToLoad:view
+            view.downloadControllers({
+                success:function(){
+                    view.activeControllers();
+                    new transition({
+                            type:anim,
+                            viewToLoad:view
+                    });
+                    if(!init){
+                        init=true;
+                        theme.loadThemes();
+                    }
+                    else theme.apply();
+                },
+                error:function(){
+                    new transition({
+                            type:anim,
+                            viewToLoad:view
+                    });
+                    if(!init){
+                        init=true;
+                        theme.loadThemes();
+                    }
+                    else theme.apply();
+                }
             });
-            if(!init){
-                init=true;
-            }
-            else theme.apply();
+            
     };
     
     var downloadView=function(request){
