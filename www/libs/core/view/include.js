@@ -8,30 +8,49 @@
 function View($id,$html){
     var html;
     var id;
-    var htmlContent;
-    var htmlFooter;
-    var htmlHeader;
+    var numOfControllersActive=0;
     function Construct($id,$html){
-       html=$html;
+       html={   "dom":$html,
+                header:$($html).find("app-header").html(),
+                content:$($html).find("app-content").html(),
+                footer:$($html).find("app-content").html()
+            };
        id=$id;
-       htmlContent=$(html).find("app-content").html();
-       htmlFooter=$(html).find("app-footer").html();
-       htmlHeader=$(html).find("app-header").html();
     }
     this.getHeader=function(){
-        return htmlHeader;
+        return html.header;
     };
     this.getContent=function(){
-        return htmlContent;
+        return html.content;
     };
     this.getFooter=function(){
-        return htmlFooter;
+        return html.footer;
     };
     this.getViewHtml=function(){
-        return $(html).html();
+        return $(html.dom).html();
     };
     this.getId=function(){
         return id;
+    };
+    this.activeControllers=function(){
+        var text=html.dom[0].innerHTML;
+        text = text.replace(/(<@=([^&@>]*)@>)/g, function(m) { 
+            return eval(m.match(new RegExp("(<@=([^&@>]*)@>)"))[2]);
+          }
+        );
+        text = text.replace(/(&lt;@=([^&@>]*)@&gt;)/g, function(m) { 
+            return eval(m.match(new RegExp("(&lt;@=([^&@>]*)@&gt;)"))[2]);
+          }
+        );
+        html.dom[0].innerHTML=text;
+    };
+    this.downloadControllers=function(_callback){
+        if($(html.dom).find("controllers").find("controller").length>0){
+            $(html.dom).find("controllers").find("controller").each(function(index, obj){
+                  controllerManager.add($(obj).text().replace(/ /g,''),_callback.success);
+            });
+            $(html.dom).find("controllers").remove();
+        }else _callback.error();
     };
     Construct($id,$html);
 }

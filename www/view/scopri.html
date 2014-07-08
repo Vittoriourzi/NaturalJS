@@ -1,4 +1,9 @@
 <view> 
+    <controllers>
+        <controller>
+            controllerScopri.js
+        </controller>
+    </controllers>
     <app-header>
         <navi 
             rightIcon="ion-ios7-plus-empty"
@@ -14,13 +19,14 @@
     <app-content>
         
         <div style="padding:10px;margin:10px;">
-        <h2>Novità introdotte dal sistema {}</h2>
+        <h2><@=scopri.title@></h2>
         <h3>Pattern MVC</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+        <p><@=scopri.content@></p>
         <h3>Caching System</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+        <p><@=scopri.content@></p>
         <h3>Write your app very fast in the way you love and know</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+        
+        <p><@=scopri.content@></p>
         </div>
         
     </app-content>
