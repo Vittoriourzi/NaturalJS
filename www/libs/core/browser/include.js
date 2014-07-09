@@ -58,7 +58,9 @@ function Browser(options){
                 $(config.parent).prepend("<app></app>");
             if(!init){
                 anim="none";
+                var display="none";
             }
+            else display=true;
             view.downloadControllers({
                 success:function(){
                     view.activeControllers();

@@ -4,21 +4,17 @@
         </controllers>
     
         <app-header>
-            <navi centerContent="La mia app"
+            <navi centerContent="Benvenuto  <@=start.person.name@> <@=start.person.surname@>"
                   rightIcon="ion-ios7-plus-empty" ></navi>    
         </app-header> 
         <app-content> 
             <search placeholder="Cerca "></search>
             
-            <list>
-            <record text="<@=start.person.name@>"></record>
-            <record text="<@=start.person.surname@>"></record>
-            </list>
             <switch-tap opt1="News" opt2="Posts" opt3="Peaple" active="Posts"></switch-tap>
-            <checkbox color="green" dim="bigswitch" id="miocheckbox" value="checked"></checkbox>    
+            <checkbox color="green" dim="bigswitch" id="miocheckbox" value="checked"></checkbox> 
             <list class="navigation">
                 <record page-navi="scopri.html" icon="ion-ios7-arrow-forward" text="Scopri"></record>
-                <record text="Login"></record>
+                <record text="Login" onClick="start.onclick();"></record>
                 <record text="Registrazione"></record>
                 <record text="Account"></record>
                 

@@ -12,18 +12,15 @@ function Themes(nameTheme){
     var defaultTheme="ios7";
     var currentTheme;
     var currentProcessNumber=0;
+    var themeLoaded=0;
     function Construct(nameTheme){
         if(nameTheme=="default")
             nameTheme=defaultTheme;
         currentTheme=nameTheme;
-        $.getScript( getPathTheme()+'install.js', function( data, textStatus, jqxhr ) {
-            callbackOnComplete();
-        });
+        $.getScript( getPathTheme()+'install.js');
 
     }
-    function callbackOnComplete(){
-        self.loadThemes();
-    }
+    
     function getPathTheme(){
         return 'libs/core/themes/'+currentTheme+'/';
     }
