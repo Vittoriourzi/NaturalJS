@@ -33,16 +33,14 @@ function View($id,$html){
         return id;
     };
     this.activeControllers=function(){
-        var text=html.dom[0].innerHTML;
-        text = text.replace(/(<@=([^&@>]*)@>)/g, function(m) { 
+        html.dom[0].innerHTML = html.dom[0].innerHTML.replace(/(<@=([^&@>]*)@>)/g, function(m) { 
             return eval(m.match(new RegExp("(<@=([^&@>]*)@>)"))[2]);
           }
         );
-        text = text.replace(/(&lt;@=([^&@>]*)@&gt;)/g, function(m) { 
+        html.dom[0].innerHTML = html.dom[0].innerHTML.replace(/(&lt;@=([^&@>]*)@&gt;)/g, function(m) { 
             return eval(m.match(new RegExp("(&lt;@=([^&@>]*)@&gt;)"))[2]);
           }
         );
-        html.dom[0].innerHTML=text;
     };
     this.downloadControllers=function(_callback){
         if($(html.dom).find("controllers").find("controller").length>0){
